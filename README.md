@@ -1,26 +1,91 @@
 # Registry Reader
 
-Программное обеспечение для анализа реестра Windows.
+Графическое приложение на Python для чтения и анализа реестра Windows.  
+Проект реализован с использованием PyQt6 и предназначен для удобного просмотра ключей и значений реестра.
+
+---
 
 ## Возможности
 
-- Чтение live-реестра Windows
-- Чтение offline-кустов (SYSTEM, SOFTWARE, SAM, SECURITY, NTUSER.DAT)
-- GUI-интерфейс (PyQt6)
-- Логирование ошибок
-- Расширяемая архитектура через RegistryInterface
+- Просмотр разделов реестра Windows
+- Чтение ключей и значений
+- Графический интерфейс (PyQt6)
+- Модульная структура проекта
+- Логирование работы приложения
+- 
+---
 
-## Установка
+# ⚙ Установка и запуск
 
-<details>
-<summary>Windows (cmd)</summary>
+## Клонирование репозитория
 
-```cmd
+```bash
+git clone https://github.com/inkabes/registry-reader.git
+```
+
+```bash
+cd registry-reader
+```
+
+---
+
+## Создание виртуального окружения
+
+### Windows
+
+```bash
 python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-</details>
+```
 
-## Запуск
+```bash
+venv\Scripts\activate
+```
+
+---
+
+## Установка зависимостей
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Запуск приложения
+
+```bash
+python -m src.main
+```
+
+или
+
 ```bash
 python src/main.py
+```
+
+---
+
+# 🔐 Запуск от имени администратора (Windows)
+
+Для корректного чтения некоторых разделов реестра рекомендуется:
+
+1. Запустить терминал **от имени администратора**
+2. Активировать виртуальное окружение:
+
+```bash
+venv\Scripts\activate
+```
+
+3. Запустить приложение:
+
+```bash
+python src/main.py
+```
+
+---
+
+# Требования
+
+- Windows 10 / 11
+- Python 3.10+
+- Права администратора (для доступа к системным веткам реестра)
