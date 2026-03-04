@@ -11,18 +11,16 @@
 - Расширяемая архитектура через RegistryInterface
 
 ## Установка
-```markdown
-Выполните команды последовательно:
+
+<details>
+<summary>Windows (cmd)</summary>
 
 ```cmd
-:: Шаг 1: Создание виртуального окружения
 python -m venv venv
-
-:: Шаг 2: Активация (Windows cmd)
 venv\Scripts\activate
-
-:: Шаг 3: Установка зависимостей
 pip install -r requirements.txt
+</details>
 
 ## Запуск
+```bash
 python src/main.py
